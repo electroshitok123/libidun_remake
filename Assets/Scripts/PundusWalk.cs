@@ -2,51 +2,17 @@ using UnityEngine;
 
 public class PundusWalk : MonoBehaviour
 {
-    public float speed; //переменная задает скорость передвижения
-    public float jumpForce; //задает силу прыжка
+    //[SerializeField] private float speed = 3f;
+    //[SerializeField] private float jumpForce = 15f;
 
-    public float movX; //показывает есть ли сейчас передвижение по оси x
-    private bool isGrounded = false;
+    //private Rigidbody2D rb;
+    //private SpriteRenderer sprite;
 
-
-    Rigidbody2D rb;
-
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        movX = 0;
-    }
-
-    void Update()
-    {
-        rb.linearVelocity = new Vector2(movX * speed, 0);
-
-        if (Input.GetKey(KeyCode.L))
-        {
-            movX = 1;
-        }
-        else
-        {
-            movX = 0;
-        }
-
-        if (Input.GetKey(KeyCode.J))
-        {
-            movX = -1;
-        }
-        else
-        {
-            movX = 0;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-        }
-    }
-
-    //void Checkgrond()
+    //private void Awake()
     //{
-    //    Collider2D[] collider = 
+    //    rb = GetComponent<Rigidbody2D>();
+    //    sprite = GetComponentInChildren<SpriteRenderer>();
     //}
+
+
 }
