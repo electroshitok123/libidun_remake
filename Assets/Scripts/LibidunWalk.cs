@@ -34,6 +34,12 @@ public class LibidunWalk : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GameObject bulletChild = Instantiate(bulletLibibdun, shootingPointSpawn);
+            
+        }
     }
 
     // FixedUpdate независим от кадров в секунду в отличие от Update, что избавляет от необходимости прописывать Time.DeltaTime
@@ -58,10 +64,5 @@ public class LibidunWalk : MonoBehaviour
             shootingPoint.transform.eulerAngles = shootingRotLeft;      //назначаем родительскому обьекту поворот налево
         }
         rb.linearVelocity = new Vector2(x, rb.linearVelocity.y);
-        if (Input.GetKey(KeyCode.E))
-        {
-            GameObject bulletChild = Instantiate(bulletLibibdun, shootingPointSpawn);
-            
-        }
     }
 }
