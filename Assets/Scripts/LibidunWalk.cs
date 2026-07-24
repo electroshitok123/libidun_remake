@@ -2,40 +2,40 @@ using UnityEngine;
 
 public class LibidunWalk : MonoBehaviour
 {
-    public float moveSpeed = 5f;    // Скорость перемещения
-    public float jumpForce = 10f;   // Множитель прыжка
-    public Transform groundCheck;   // Проверка стояния на земое
-    public float groundCheckRadius = 0.2f;  // Радиус пребывания рядом с землёй
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
 
     private bool isGrounded;
     private float moveInput;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    private Animator animator; // Аниматор
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>(); // Компонент физики
+        sprite = GetComponent<SpriteRenderer>(); // Компонент спрайтов
+        animator = GetComponent<Animator>(); // Компонент анимации
     }
 
-    // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);     // Проверка есть ли земля под ногами
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
+
+        UpdateAnimations(); // Проигрывание анимаций
     }
 
-    // FixedUpdate независим от кадров в секунду в отличие от Update, что избавляет от необходимости прописывать Time.DeltaTime
     void FixedUpdate()
     {
         float x = 0f;
-        float y = 0f;
         if (Input.GetKey(KeyCode.D))
         {
             x += moveSpeed;
@@ -47,5 +47,18 @@ public class LibidunWalk : MonoBehaviour
             sprite.flipX = false;
         }
         rb.linearVelocity = new Vector2(x, rb.linearVelocity.y);
+    }
+
+    // Метод для анимации
+    void UpdateAnimations()
+    {
+        if (animator == null)
+            return;
+
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isGrounded", isGrounded);
+        animator.SetFloat("verticalSpeed", rb.linearVelocity.y);
     }
 }
