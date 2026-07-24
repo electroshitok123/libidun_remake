@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BulletFlight : MonoBehaviour
 {
-    [SerializeField] private float speed = 1f;
+    [SerializeField] private float speed = 10f;
     private SpriteRenderer sprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
