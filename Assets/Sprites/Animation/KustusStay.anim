@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PundusWalk
+  m_Name: KustusStay
   serializedVersion: 8
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -2794871748795920038, guid: f6eaca3abc050a74f92366e330fc787f, type: 3}
+      value: {fileID: 1223352794778270267, guid: 5ce957459057bde47b139dfae7b7e105, type: 3}
     - time: 0.016666668
-      value: {fileID: -7294119695437017264, guid: e6baae633a7baaa41a9f098bf704f73e, type: 3}
+      value: {fileID: 1223352794778270267, guid: 5ce957459057bde47b139dfae7b7e105, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -47,8 +47,8 @@ AnimationClip:
       isSerializeReferenceCurve: 0
       metaData: 0
     pptrCurveMapping:
-    - {fileID: -2794871748795920038, guid: f6eaca3abc050a74f92366e330fc787f, type: 3}
-    - {fileID: -7294119695437017264, guid: e6baae633a7baaa41a9f098bf704f73e, type: 3}
+    - {fileID: 1223352794778270267, guid: 5ce957459057bde47b139dfae7b7e105, type: 3}
+    - {fileID: 1223352794778270267, guid: 5ce957459057bde47b139dfae7b7e105, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

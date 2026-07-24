@@ -957,6 +957,7 @@ GameObject:
   - component: {fileID: 1756625508}
   - component: {fileID: 1756625507}
   - component: {fileID: 1756625506}
+  - component: {fileID: 1756625511}
   m_Layer: 6
   m_Name: Kustus
   m_TagString: Untagged
@@ -1094,7 +1095,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1389117941
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 1223352794778270267, guid: 5ce957459057bde47b139dfae7b7e105, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1123,6 +1124,28 @@ Transform:
   - {fileID: 343326388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1756625511
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756625505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1616991b278edc44a84a04036caa036, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1918234049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1251,7 @@ GameObject:
   - component: {fileID: 2013033941}
   - component: {fileID: 2013033940}
   - component: {fileID: 2013033939}
+  - component: {fileID: 2013033944}
   m_Layer: 6
   m_Name: Pundus
   m_TagString: Untagged
@@ -1365,7 +1389,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1389117941
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 6078975056267913872, guid: 4ce48b49f05c0bb4b8d4e16048ba44f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1394,6 +1418,28 @@ Transform:
   - {fileID: 273079130}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2013033944
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013033938}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e2c1ebcc555b0e841bbb30aeeb38f28b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

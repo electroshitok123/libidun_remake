@@ -59,6 +59,5 @@ public class LibidunWalk : MonoBehaviour
 
         animator.SetBool("isMoving", isMoving);
         animator.SetBool("isGrounded", isGrounded);
-        animator.SetFloat("verticalSpeed", rb.linearVelocity.y);
     }
 }
