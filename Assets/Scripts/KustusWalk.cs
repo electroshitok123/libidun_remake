@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LibidunWalk : MonoBehaviour
+public class KustusWalk : MonoBehaviour
 {
     public float moveSpeed = 5f;    // Скорость перемещения
     public float jumpForce = 10f;   // Множитель прыжка
@@ -25,7 +25,7 @@ public class LibidunWalk : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);     // Проверка есть ли земля под ногами
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
@@ -36,15 +36,15 @@ public class LibidunWalk : MonoBehaviour
     {
         float x = 0f;
         float y = 0f;
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             x += moveSpeed;
-            sprite.flipX = true;
+            sprite.flipX = false;
         }
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             x -= moveSpeed;
-            sprite.flipX = false;
+            sprite.flipX = true;
         }
         rb.linearVelocity = new Vector2(x, rb.linearVelocity.y);
     }
