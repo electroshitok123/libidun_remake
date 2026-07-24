@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LibidunWalk : MonoBehaviour
@@ -7,6 +8,7 @@ public class LibidunWalk : MonoBehaviour
     public Transform groundCheck;   // Проверка стояния на земое
     public float groundCheckRadius = 0.2f;  // Радиус пребывания рядом с землёй
     public LayerMask groundLayer;
+    public Transform shootingPoint;
 
     private bool isGrounded;
     private float moveInput;
@@ -40,6 +42,7 @@ public class LibidunWalk : MonoBehaviour
         {
             x += moveSpeed;
             sprite.flipX = true;
+            
         }
         if (Input.GetKey(KeyCode.A))
         {

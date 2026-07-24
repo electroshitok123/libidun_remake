@@ -7,6 +7,7 @@ public class KustusWalk : MonoBehaviour
     public Transform groundCheck;   // Проверка стояния на земое
     public float groundCheckRadius = 0.2f;  // Радиус пребывания рядом с землёй
     public LayerMask groundLayer;
+    
 
     private bool isGrounded;
     private float moveInput;
@@ -40,6 +41,7 @@ public class KustusWalk : MonoBehaviour
         {
             x += moveSpeed;
             sprite.flipX = false;
+
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
