@@ -38,7 +38,7 @@ public class LibidunWalk : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameObject bulletChild = Instantiate(bulletLibibdun, shootingPointSpawn);
-            
+            bulletChild.transform.SetParent(null);
         }
     }
 
