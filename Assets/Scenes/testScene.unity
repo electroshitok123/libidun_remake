@@ -297,7 +297,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  shootingPoint: {fileID: 0}
+  shootingPoint: {fileID: 848674028}
+  shootingPointSpawn: {fileID: 0}
+  bulletLibibdun: {fileID: 2013033938}
 --- !u!70 &233783062
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
