@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 661987491}
   - component: {fileID: 661987492}
   m_Layer: 6
-  m_Name: ShootingPointParentPundus
+  m_Name: ShootingPointParentLibidun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1543,9 +1543,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  shootingPoint: {fileID: 1029780607}
-  shootingPointSpawn: {fileID: 0}
-  bulletLibibdun: {fileID: 0}
+  shootingPoint: {fileID: 887978358}
+  shootingPointSpawn: {fileID: 887978358}
+  bulletKustus: {fileID: 3919463646163226365, guid: 1863121560d08244f9dccd6356a81042, type: 3}
 --- !u!70 &1756625507
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1726,7 +1726,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  shootingPoint: {fileID: 1092539668}
+  shootingPoint: {fileID: 818871209}
   shootingPointSpawn: {fileID: 818871209}
   bulletPundus: {fileID: 7126289059187333039, guid: 9eda23b82c5e57d4ba9a5507fc5b98d7, type: 3}
 --- !u!50 &2013033940
