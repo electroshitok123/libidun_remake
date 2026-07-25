@@ -8,6 +8,9 @@ TagManager:
   - Libidun
   - Pundus
   - Kustus
+  - LibidunBullet
+  - PundusBullet
+  - KustusBullet
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6689276907223733078}
   m_Layer: 0
   m_Name: KustusBullet
-  m_TagString: Untagged
+  m_TagString: KustusBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
