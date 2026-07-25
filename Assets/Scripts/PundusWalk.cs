@@ -33,7 +33,7 @@ public class PundusWalk : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.O))
         {
             GameObject bulletChild = Instantiate(bulletPundus, shootingPointSpawn);
             bulletChild.transform.SetParent(null);

@@ -18,4 +18,17 @@ public class BulletFlight : MonoBehaviour
         transform.Translate(reverseFlight * speed * Time.deltaTime);
         sprite.flipX = true;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+
+        //if (gameObject.CompareTag("PundusBullet") && collision.CompareTag("Water"))
+        //{
+
+        //}
+    }
 }
