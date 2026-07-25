@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class PundusWalk : MonoBehaviour
 {
-    public float moveSpeed = 5f;    // Скорость перемещения
-    public float jumpForce = 10f;   // Множитель прыжка
-    public Transform groundCheck;   // Проверка стояния на земое
-    public float groundCheckRadius = 0.2f;  // Радиус пребывания рядом с землёй
+    public float moveSpeed = 5f;    // Г‘ГЄГ®Г°Г®Г±ГІГј ГЇГҐГ°ГҐГ¬ГҐГ№ГҐГ­ГЁГї
+    public float jumpForce = 10f;   // ГЊГ­Г®Г¦ГЁГІГҐГ«Гј ГЇГ°Г»Г¦ГЄГ 
+    public Transform groundCheck;   // ГЏГ°Г®ГўГҐГ°ГЄГ  Г±ГІГ®ГїГ­ГЁГї Г­Г  Г§ГҐГ¬Г®ГҐ
+    public float groundCheckRadius = 0.2f;  // ГђГ Г¤ГЁГіГ± ГЇГ°ГҐГЎГ»ГўГ Г­ГЁГї Г°ГїГ¤Г®Г¬ Г± Г§ГҐГ¬Г«ВёГ©
     public LayerMask groundLayer;
-    public Transform shootingPoint;    //родительский обьект точки стрельбы
+    public Transform shootingPoint;    //Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГЁГ© Г®ГЎГјГҐГЄГІ ГІГ®Г·ГЄГЁ Г±ГІГ°ГҐГ«ГјГЎГ»
     public Transform shootingPointSpawn;
     public GameObject bulletPundus;
 
@@ -15,52 +15,68 @@ public class PundusWalk : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    private Animator animator;      // Г„Г®ГЎГ ГўГ«ГїГҐГІ Г Г­ГЁГ¬Г ГІГ®Г°
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>(); // ГЂГ­ГЁГ¬Г ГІГ®Г°
     }
 
     // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);     // Проверка есть ли земля под ногами
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);     // ГЏГ°Г®ГўГҐГ°ГЄГ  ГҐГ±ГІГј Г«ГЁ Г§ГҐГ¬Г«Гї ГЇГ®Г¤ Г­Г®ГЈГ Г¬ГЁ
 
         if (Input.GetKeyDown(KeyCode.I) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
+        UpdateAnimations();
+
         if (Input.GetKeyDown(KeyCode.O))
         {
             GameObject bulletChild = Instantiate(bulletPundus, shootingPointSpawn);
             bulletChild.transform.SetParent(null);
         }
+
     }
 
-    // FixedUpdate независим от кадров в секунду в отличие от Update, что избавляет от необходимости прописывать Time.DeltaTime
+    // FixedUpdate Г­ГҐГ§Г ГўГЁГ±ГЁГ¬ Г®ГІ ГЄГ Г¤Г°Г®Гў Гў Г±ГҐГЄГіГ­Г¤Гі Гў Г®ГІГ«ГЁГ·ГЁГҐ Г®ГІ Update, Г·ГІГ® ГЁГ§ГЎГ ГўГ«ГїГҐГІ Г®ГІ Г­ГҐГ®ГЎГµГ®Г¤ГЁГ¬Г®Г±ГІГЁ ГЇГ°Г®ГЇГЁГ±Г»ГўГ ГІГј Time.DeltaTime
     void FixedUpdate()
     {
         Vector3 shootingRotRight = transform.eulerAngles;
-        shootingRotRight.z = 180f;  //Задать угол поворота (в этом случае 180 - то есть право)
+        shootingRotRight.z = 180f;  //Г‡Г Г¤Г ГІГј ГіГЈГ®Г« ГЇГ®ГўГ®Г°Г®ГІГ  (Гў ГЅГІГ®Г¬ Г±Г«ГіГ·Г ГҐ 180 - ГІГ® ГҐГ±ГІГј ГЇГ°Г ГўГ®)
         Vector3 shootingRotLeft = transform.eulerAngles;
-        shootingRotLeft.z = 0f; //Задать угол поворота (в этом случае 0 - то есть лево)
+        shootingRotLeft.z = 0f; //Г‡Г Г¤Г ГІГј ГіГЈГ®Г« ГЇГ®ГўГ®Г°Г®ГІГ  (Гў ГЅГІГ®Г¬ Г±Г«ГіГ·Г ГҐ 0 - ГІГ® ГҐГ±ГІГј Г«ГҐГўГ®)
         float x = 0f;
         float y = 0f;
         if (Input.GetKey(KeyCode.L))
         {
             x += moveSpeed;
             sprite.flipX = false;
-            shootingPoint.transform.eulerAngles = shootingRotRight;     //назначаем родительскому обьекту поворот направо
+            shootingPoint.transform.eulerAngles = shootingRotRight;     //Г­Г Г§Г­Г Г·Г ГҐГ¬ Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГ®Г¬Гі Г®ГЎГјГҐГЄГІГі ГЇГ®ГўГ®Г°Г®ГІ Г­Г ГЇГ°Г ГўГ®
         }
         if (Input.GetKey(KeyCode.J))
         {
             x -= moveSpeed;
             sprite.flipX = true;
-            shootingPoint.transform.eulerAngles = shootingRotLeft;      //назначаем родительскому обьекту поворот налево
+            shootingPoint.transform.eulerAngles = shootingRotLeft;      //Г­Г Г§Г­Г Г·Г ГҐГ¬ Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГ®Г¬Гі Г®ГЎГјГҐГЄГІГі ГЇГ®ГўГ®Г°Г®ГІ Г­Г Г«ГҐГўГ®
         }
         rb.linearVelocity = new Vector2(x, rb.linearVelocity.y);
+    }
+    // ГЊГҐГІГ®Г¤ Г¤Г«Гї Г Г­ГЁГ¬Г Г¶ГЁГЁ
+    void UpdateAnimations()
+    {
+        if (animator == null)
+            return;
+
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isGrounded", isGrounded);
     }
 }

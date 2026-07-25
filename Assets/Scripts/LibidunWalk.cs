@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class LibidunWalk : MonoBehaviour
 {
-    public float moveSpeed = 5f;    // Скорость перемещения
-    public float jumpForce = 10f;   // Множитель прыжка
-    public Transform groundCheck;   // Проверка стояния на земое
-    public float groundCheckRadius = 0.2f;  // Радиус пребывания рядом с землёй
+    public float moveSpeed = 5f;
+    public float jumpForce = 10f;
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
-    public Transform shootingPoint;    //родительский обьект точки стрельбы
+    public Transform shootingPoint;    //Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГЁГ© Г®ГЎГјГҐГЄГІ ГІГ®Г·ГЄГЁ Г±ГІГ°ГҐГ«ГјГЎГ»
     public Transform shootingPointSpawn;
     public GameObject bulletLibibdun;
 
@@ -16,53 +16,66 @@ public class LibidunWalk : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
     private SpriteRenderer sprite;
+    private Animator animator; // ГЂГ­ГЁГ¬Г ГІГ®Г°
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        sprite = GetComponent<SpriteRenderer>();
-        
+        rb = GetComponent<Rigidbody2D>(); // ГЉГ®Г¬ГЇГ®Г­ГҐГ­ГІ ГґГЁГ§ГЁГЄГЁ
+        sprite = GetComponent<SpriteRenderer>(); // ГЉГ®Г¬ГЇГ®Г­ГҐГ­ГІ Г±ГЇГ°Г Г©ГІГ®Гў
+        animator = GetComponent<Animator>(); // ГЉГ®Г¬ГЇГ®Г­ГҐГ­ГІ Г Г­ГЁГ¬Г Г¶ГЁГЁ 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);     // Проверка есть ли земля под ногами
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
+
+        UpdateAnimations(); // ГЏГ°Г®ГЁГЈГ°Г»ГўГ Г­ГЁГҐ Г Г­ГЁГ¬Г Г¶ГЁГ©
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             GameObject bulletChild = Instantiate(bulletLibibdun, shootingPointSpawn);
             bulletChild.transform.SetParent(null);
         }
+
     }
 
-    // FixedUpdate независим от кадров в секунду в отличие от Update, что избавляет от необходимости прописывать Time.DeltaTime
     void FixedUpdate()
     {
         Vector3 shootingRotRight = transform.eulerAngles;   
-        shootingRotRight.z = 180f;  //Задать угол поворота (в этом случае 180 - то есть право)
+        shootingRotRight.z = 180f;  //Г‡Г Г¤Г ГІГј ГіГЈГ®Г« ГЇГ®ГўГ®Г°Г®ГІГ  (Гў ГЅГІГ®Г¬ Г±Г«ГіГ·Г ГҐ 180 - ГІГ® ГҐГ±ГІГј ГЇГ°Г ГўГ®)
         Vector3 shootingRotLeft = transform.eulerAngles;
-        shootingRotLeft.z = 0f; //Задать угол поворота (в этом случае 0 - то есть лево)
+        shootingRotLeft.z = 0f; //Г‡Г Г¤Г ГІГј ГіГЈГ®Г« ГЇГ®ГўГ®Г°Г®ГІГ  (Гў ГЅГІГ®Г¬ Г±Г«ГіГ·Г ГҐ 0 - ГІГ® ГҐГ±ГІГј Г«ГҐГўГ®)
         float x = 0f;
-        float y = 0f;
         if (Input.GetKey(KeyCode.D))
         {
             x += moveSpeed;
             sprite.flipX = true;
-            shootingPoint.transform.eulerAngles = shootingRotRight;     //назначаем родительскому обьекту поворот направо
+            shootingPoint.transform.eulerAngles = shootingRotRight;     //Г­Г Г§Г­Г Г·Г ГҐГ¬ Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГ®Г¬Гі Г®ГЎГјГҐГЄГІГі ГЇГ®ГўГ®Г°Г®ГІ Г­Г ГЇГ°Г ГўГ®
         }
         if (Input.GetKey(KeyCode.A))
         {
             x -= moveSpeed;
             sprite.flipX = false;
-            shootingPoint.transform.eulerAngles = shootingRotLeft;      //назначаем родительскому обьекту поворот налево
+            shootingPoint.transform.eulerAngles = shootingRotLeft;      //Г­Г Г§Г­Г Г·Г ГҐГ¬ Г°Г®Г¤ГЁГІГҐГ«ГјГ±ГЄГ®Г¬Гі Г®ГЎГјГҐГЄГІГі ГЇГ®ГўГ®Г°Г®ГІ Г­Г Г«ГҐГўГ®
         }
         rb.linearVelocity = new Vector2(x, rb.linearVelocity.y);
+    }
+
+    // ГЊГҐГІГ®Г¤ Г¤Г«Гї Г Г­ГЁГ¬Г Г¶ГЁГЁ
+    void UpdateAnimations()
+    {
+        if (animator == null)
+            return;
+
+        bool isMoving = Mathf.Abs(rb.linearVelocity.x) > 0.1f;
+
+        animator.SetBool("isMoving", isMoving);
+        animator.SetBool("isGrounded", isGrounded);
     }
 }
