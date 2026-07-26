@@ -11,6 +11,7 @@ TagManager:
   - LibidunBullet
   - PundusBullet
   - KustusBullet
+  - Box
   layers:
   - Default
   - TransparentFX
