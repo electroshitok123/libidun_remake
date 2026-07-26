@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3510503494603710003}
   m_Layer: 6
   m_Name: Kustus
-  m_TagString: Player
+  m_TagString: Kustus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KustusWalk
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 11
   groundCheck: {fileID: 526796418974447313}
   groundCheckRadius: 0.2
   groundLayer:
