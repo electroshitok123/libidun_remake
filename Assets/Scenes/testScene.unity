@@ -738,6 +738,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: KustusDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 8620322619688960547, guid: 63b808e05dd586c4fbffa4ece5814a2d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620322619688960547, guid: 63b808e05dd586c4fbffa4ece5814a2d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1980865645
+      objectReference: {fileID: 0}
     - target: {fileID: 8673090565038237538, guid: 63b808e05dd586c4fbffa4ece5814a2d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.0263996
@@ -839,6 +847,14 @@ PrefabInstance:
       propertyPath: DoorsCounter
       value: 
       objectReference: {fileID: 5622215416248054122}
+    - target: {fileID: 6941342217216233011, guid: e407d3a9b51c7494f986bef2531503cf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941342217216233011, guid: e407d3a9b51c7494f986bef2531503cf, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1980865645
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -937,8 +953,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1437001315
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -1100,8 +1116,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1437001315
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -1171,6 +1187,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PundusDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 4633451225172936374, guid: e416bda26b2f8704eb71e8e4905d1a03, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633451225172936374, guid: e416bda26b2f8704eb71e8e4905d1a03, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1980865645
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1187,6 +1211,18 @@ PrefabInstance:
     - target: {fileID: 1647677909442222728, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
       propertyPath: m_Name
       value: Pundus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342065520591751951, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342065520591751951, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342065520591751951, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1389117941
       objectReference: {fileID: 0}
     - target: {fileID: 5542165855102959661, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1313,6 +1349,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1584803823868903887, guid: 82ba1d7ac55fd5545bab869a0b2946eb, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584803823868903887, guid: 82ba1d7ac55fd5545bab869a0b2946eb, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1389117941
+      objectReference: {fileID: 0}
     - target: {fileID: 4469493097921239551, guid: 82ba1d7ac55fd5545bab869a0b2946eb, type: 3}
       propertyPath: m_Name
       value: Libidun
@@ -1356,6 +1400,10 @@ PrefabInstance:
     - target: {fileID: 4678415214252812746, guid: 82ba1d7ac55fd5545bab869a0b2946eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050925997015443905, guid: 82ba1d7ac55fd5545bab869a0b2946eb, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1527,8 +1575,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1437001315
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -1569,7 +1617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77807894271d3b4eab74be75c5c5cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorsCounter
-  doors: 0
 --- !u!212 &5696173757404836282
 SpriteRenderer:
   serializedVersion: 3
@@ -1615,8 +1662,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1437001315
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
@@ -1674,6 +1721,18 @@ PrefabInstance:
     - target: {fileID: 2250711908857924717, guid: 3f6f1b4c85e8451478dec57ae73ba8fa, type: 3}
       propertyPath: m_Name
       value: Kustus
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978691893271868813, guid: 3f6f1b4c85e8451478dec57ae73ba8fa, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978691893271868813, guid: 3f6f1b4c85e8451478dec57ae73ba8fa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4978691893271868813, guid: 3f6f1b4c85e8451478dec57ae73ba8fa, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1389117941
       objectReference: {fileID: 0}
     - target: {fileID: 5596866165386358866, guid: 3f6f1b4c85e8451478dec57ae73ba8fa, type: 3}
       propertyPath: m_LocalPosition.x
