@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,17 +6,28 @@ public class DoorsCounter : MonoBehaviour
 {
     public int doors;
 
-    private void Update()
+    private void Start()
     {
-        LoadNextScene();
+        doors = 0;
     }
-    public void LoadNextScene()
+    private void Update()
     {
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         int nextIndex = currentIndex + 1;
         if (doors == 3)
         {
+            UnlockLevel();
+            PlayerPrefs.Save();
             SceneManager.LoadScene(nextIndex);
+        }
+    }
+
+    public void UnlockLevel()
+    {
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        if (currentLevel >= PlayerPrefs.GetInt("levels", 1))
+        {
+            PlayerPrefs.SetInt("levels", currentLevel + 1);
         }
     }
 

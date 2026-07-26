@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531115bea89ffd4408ea88e188b375e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  flagOnButton: 0
 --- !u!1 &1420981199
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ccff19b0c26874d9cec1fe094939e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  buttonScript: {fileID: 879700247}
+  animator: {fileID: 1946022741}
 --- !u!1 &2082733316
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,6 +1620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c77807894271d3b4eab74be75c5c5cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorsCounter
+  doors: 0
 --- !u!212 &5696173757404836282
 SpriteRenderer:
   serializedVersion: 3
