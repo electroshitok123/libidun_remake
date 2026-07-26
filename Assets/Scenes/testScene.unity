@@ -130,8 +130,9 @@ GameObject:
   - component: {fileID: 879700246}
   - component: {fileID: 879700245}
   - component: {fileID: 879700244}
+  - component: {fileID: 879700247}
   m_Layer: 0
-  m_Name: "\u041A\u043D\u043E\u043F\u043A\u0430 1_0"
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -258,6 +259,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &879700247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879700243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531115bea89ffd4408ea88e188b375e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &1420981199
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,9 +420,9 @@ GameObject:
   - component: {fileID: 1946022743}
   - component: {fileID: 1946022742}
   - component: {fileID: 1946022741}
+  - component: {fileID: 1946022745}
   m_Layer: 0
-  m_Name: "\u041F\u043B\u0430\u0442\u0444\u043E\u0440\u043C\u0430 3 \u043D\u0430
-    1_0"
+  m_Name: PlatformHorizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -552,12 +565,24 @@ Transform:
   m_GameObject: {fileID: 1946022740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.531, y: 0.685, z: 0}
+  m_LocalPosition: {x: 6.803, y: 0.685, z: 0}
   m_LocalScale: {x: 0.27508938, y: 0.27508938, z: 0.27508938}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946022745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946022740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ccff19b0c26874d9cec1fe094939e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &2082733316
 GameObject:
   m_ObjectHideFlags: 0
