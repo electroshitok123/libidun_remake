@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5737560738575827122}
   m_Layer: 6
   m_Name: Pundus
-  m_TagString: Player
+  m_TagString: Pundus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647677909442222728}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.17586, y: 1.36095, z: 0}
   m_LocalScale: {x: 0.4071, y: 0.4071, z: 0.4071}
   m_ConstrainProportionsScale: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 11
   groundCheck: {fileID: 6557274106379225612}
   groundCheckRadius: 0.2
   groundLayer:

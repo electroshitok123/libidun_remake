@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 6050925997015443905}
   m_Layer: 6
   m_Name: Libidun
-  m_TagString: Player
+  m_TagString: Libidun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4469493097921239551}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.50886, y: 1.37095, z: 0}
   m_LocalScale: {x: 0.35740128, y: 0.35740128, z: 0.35740128}
   m_ConstrainProportionsScale: 0
@@ -259,12 +259,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LibidunWalk
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 11
   groundCheck: {fileID: 1494047934602992089}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   shootingPoint: {fileID: 999570795077211172}
   shootingPointSpawn: {fileID: 7973614709280906769}
   bulletLibibdun: {fileID: 7839786585583748254, guid: e0986038b3b18794dab9a8b4d3e684e9, type: 3}
