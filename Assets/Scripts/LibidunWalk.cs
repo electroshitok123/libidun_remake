@@ -47,27 +47,30 @@ public class LibidunWalk : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Shoot
         Vector3 shootingRotRight = transform.eulerAngles;   
         shootingRotRight.z = 180f;  //Çàäàòü óãîë ïîâîðîòà (â ýòîì ñëó÷àå 180 - òî åñòü ïðàâî)
         Vector3 shootingRotLeft = transform.eulerAngles;
         shootingRotLeft.z = 0f; //Çàäàòü óãîë ïîâîðîòà (â ýòîì ñëó÷àå 0 - òî åñòü ëåâî)
+
+        // Walk
         float x = 0f;
         if (Input.GetKey(KeyCode.D))
         {
             x += moveSpeed;
             sprite.flipX = true;
-            shootingPoint.transform.eulerAngles = shootingRotRight;     //íàçíà÷àåì ðîäèòåëüñêîìó îáüåêòó ïîâîðîò íàïðàâî
+            shootingPoint.transform.eulerAngles = shootingRotRight;
         }
         if (Input.GetKey(KeyCode.A))
         {
             x -= moveSpeed;
             sprite.flipX = false;
-            shootingPoint.transform.eulerAngles = shootingRotLeft;      //íàçíà÷àåì ðîäèòåëüñêîìó îáüåêòó ïîâîðîò íàëåâî
+            shootingPoint.transform.eulerAngles = shootingRotLeft;
         }
         rb.linearVelocity = new Vector2(x, rb.linearVelocity.y);
     }
 
-    // Ìåòîä äëÿ àíèìàöèè
+    // Animation
     void UpdateAnimations()
     {
         if (animator == null)
