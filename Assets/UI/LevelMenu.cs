@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class LevelMenu : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public Button[] buttons;
     int unlockedLevel;
     // Unlockable levels
@@ -24,6 +25,8 @@ public class LevelMenu : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> Stashed changes
     // All levels
     public void OpenLevel(int levelID)
     {
