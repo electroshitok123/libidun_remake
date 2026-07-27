@@ -1,8 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pauseObject : MonoBehaviour
 {
     public GameObject panel;
+
+    void Start()
+    {
+        panel.SetActive(false);
+        Time.timeScale = 1f;
+    }
 
     void Update()
     {
@@ -32,5 +39,10 @@ public class pauseObject : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
