@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531115bea89ffd4408ea88e188b375e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  flagOnButton: 0
 --- !u!1 &1420981199
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +505,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3947530919684135507, guid: 2579ea6e467be5d438c96f463a3c3672, type: 3}
   m_PrefabInstance: {fileID: 827609867779539925}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946022740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ccff19b0c26874d9cec1fe094939e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  buttonScript: {fileID: 879700247}
+  animator: {fileID: 1946022741}
 --- !u!1 &2082733316
 GameObject:
   m_ObjectHideFlags: 0

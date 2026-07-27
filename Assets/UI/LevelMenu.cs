@@ -4,11 +4,13 @@ using UnityEngine.UI;
 
 public class LevelMenu : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public Button[] buttons;
+    int unlockedLevel;
     // Unlockable levels
-    private void Awake()
+    void Start()
     {
-        int unlockedLevel = PlayerPrefs.GetInt("Unlocked level", 1);    // first level always unlock
+        unlockedLevel = PlayerPrefs.GetInt("level", 1);    // first level always unlock
 
         // before unlock
         for (int i = 0; i < buttons.Length; i++)
@@ -23,10 +25,11 @@ public class LevelMenu : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> Stashed changes
     // All levels
     public void OpenLevel(int levelID)
     {
-        string levelName = "Level " + levelID;
-        SceneManager.LoadScene(levelName);
+        SceneManager.LoadScene(levelID);
     }
 }

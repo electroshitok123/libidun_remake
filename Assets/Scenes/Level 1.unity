@@ -184,9 +184,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 87881337360356342, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1647677909442222728, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
       propertyPath: m_Name
       value: Pundus
+      objectReference: {fileID: 0}
+    - target: {fileID: 1647677909442222728, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909435152678564551, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5542165855102959661, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -227,6 +239,10 @@ PrefabInstance:
     - target: {fileID: 5542165855102959661, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6317357643902457140, guid: b069de6ef34f4da4dbd4716e56203ca7, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -285,10 +301,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: LibidunDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 5643770442637264319, guid: e407d3a9b51c7494f986bef2531503cf, type: 3}
+      propertyPath: DoorsCounter
+      value: 
+      objectReference: {fileID: 2118170596}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4144362694794563127, guid: e407d3a9b51c7494f986bef2531503cf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1526989607}
   m_SourcePrefab: {fileID: 100100000, guid: e407d3a9b51c7494f986bef2531503cf, type: 3}
 --- !u!1001 &880459670
 PrefabInstance:
@@ -298,6 +321,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1950411453192075925, guid: 63b808e05dd586c4fbffa4ece5814a2d, type: 3}
+      propertyPath: DoorsCounter
+      value: 
+      objectReference: {fileID: 2118170596}
     - target: {fileID: 4814800370655312716, guid: 63b808e05dd586c4fbffa4ece5814a2d, type: 3}
       propertyPath: m_Name
       value: KustusDoor
@@ -347,6 +374,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63b808e05dd586c4fbffa4ece5814a2d, type: 3}
+--- !u!1 &1526989602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4144362694794563127, guid: e407d3a9b51c7494f986bef2531503cf, type: 3}
+  m_PrefabInstance: {fileID: 691361087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1526989607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526989602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77807894271d3b4eab74be75c5c5cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorsCounter
+  doors: 0
 --- !u!1 &1555425543
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +403,7 @@ GameObject:
   - component: {fileID: 1555425546}
   - component: {fileID: 1555425545}
   - component: {fileID: 1555425544}
+  - component: {fileID: 1555425547}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -439,6 +485,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1555425547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555425543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1851874945
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +716,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2641771629940337369, guid: e416bda26b2f8704eb71e8e4905d1a03, type: 3}
+      propertyPath: DoorsCounter
+      value: 
+      objectReference: {fileID: 2118170596}
     - target: {fileID: 4484632956171485224, guid: e416bda26b2f8704eb71e8e4905d1a03, type: 3}
       propertyPath: m_Name
       value: PundusDoor
@@ -692,6 +786,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82ba1d7ac55fd5545bab869a0b2946eb, type: 3}
+--- !u!1 &2118170594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2118170595}
+  - component: {fileID: 2118170596}
+  m_Layer: 0
+  m_Name: Doors Counter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2118170595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118170594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.08309, y: -0.10346, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2118170596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118170594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c77807894271d3b4eab74be75c5c5cd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorsCounter
+  doors: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -704,3 +843,4 @@ SceneRoots:
   - {fileID: 880459670}
   - {fileID: 1865851215}
   - {fileID: 691361087}
+  - {fileID: 2118170595}
