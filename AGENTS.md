@@ -5,4 +5,5 @@
   - Name: pauseObject
   - Tag: Untagged
   - Layer: Default
+  
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->
