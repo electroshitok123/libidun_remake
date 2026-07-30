@@ -119,8 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &694864433
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531115bea89ffd4408ea88e188b375e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
->>>>>>> Stashed changes
 --- !u!1 &1420981199
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,8 +517,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1584779614
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1001 &109376191969724563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -922,8 +916,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1001 &827609867779539925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1092,7 +1084,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 815755509}
   m_SourcePrefab: {fileID: 100100000, guid: 2579ea6e467be5d438c96f463a3c3672, type: 3}
->>>>>>> Stashed changes
 --- !u!4 &1137648373688320885
 Transform:
   m_ObjectHideFlags: 0

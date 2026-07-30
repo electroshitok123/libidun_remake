@@ -26,14 +26,14 @@ MonoBehaviour:
     m_path: Assets/Scenes/MainMenu.unity
     m_guid: d9e0010a4459f75498365ee8a401adb1
   - m_enabled: 1
-    m_path: Assets/Scenes/testScene.unity
-    m_guid: 8c9cfa26abfee488c85f1582747f6a02
-  - m_enabled: 1
     m_path: Assets/Scenes/Level 1.unity
     m_guid: 31263c527b9b00d4fb2a957fb0f1c8b5
   - m_enabled: 1
     m_path: Assets/Scenes/Level 2.unity
     m_guid: ff06f87d73cd66a4296297b3b9a2fca9
+  - m_enabled: 0
+    m_path: Assets/Scenes/testScene.unity
+    m_guid: 8c9cfa26abfee488c85f1582747f6a02
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
