@@ -34,7 +34,7 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/Level 3.unity
     m_guid: e3dc044dcaa4a364daa062e3f1edbf80
-  - m_enabled: 0
+  - m_enabled: 1
     m_path: Assets/Scenes/testScene.unity
     m_guid: 8c9cfa26abfee488c85f1582747f6a02
   m_HasScriptingDefines: 0

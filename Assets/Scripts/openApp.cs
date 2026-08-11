@@ -7,7 +7,7 @@ public class openApp : MonoBehaviour
     {
         try
         {
-            Process.Start("C:\\Program Files\\Blender Foundation\\Blender 5.1\\blender-launcher.exe");
+            Process.Start("\"C:\\Users\\domofon\\Desktop\\либидун и пундус rimeyk\\rimeyk\\libidun_remake\\Assets\\Scripts\\win32calc.exe\"");
         }
         catch (System.Exception e) 
         {
