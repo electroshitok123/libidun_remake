@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
+using System.Runtime.InteropServices;
 
 public class pauseObject : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class pauseObject : MonoBehaviour
             Time.timeScale = 1f;
         }
     }
+
     public void ContinuePlay()
     {
         panel.SetActive(false);
@@ -38,11 +41,17 @@ public class pauseObject : MonoBehaviour
 
     public void ExitGame()
     {
-        Application.Quit();
+        WindowsMessageBox.MessageBox(IntPtr.Zero, "Нет.", "Нет.", 0);
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public class WindowsMessageBox : MonoBehaviour
+    {
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        public static extern int MessageBox(IntPtr hWnd, string text, string caption, uint type);
     }
 }

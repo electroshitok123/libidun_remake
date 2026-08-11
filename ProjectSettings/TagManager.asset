@@ -58,11 +58,14 @@ TagManager:
   - name: Decoration
     uniqueID: 2314101651
     locked: 0
-  - name: Ground
-    uniqueID: 1437001315
-    locked: 0
   - name: Player
     uniqueID: 2905849355
+    locked: 0
+  - name: Barrier
+    uniqueID: 2843920033
+    locked: 0
+  - name: Ground
+    uniqueID: 1437001315
     locked: 0
   - name: UI
     uniqueID: 829461671
