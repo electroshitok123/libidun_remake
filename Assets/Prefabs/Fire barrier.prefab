@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7517458713915006562}
   - component: {fileID: 8009023073912215309}
   - component: {fileID: 2726666259209513170}
+  - component: {fileID: 2152422431959238599}
   m_Layer: 0
   m_Name: Fire barrier
-  m_TagString: Untagged
+  m_TagString: FireBarrier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,3 +157,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.94, y: 2.56}
   m_EdgeRadius: 0
+--- !u!95 &2152422431959238599
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557489686780652014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49348716f63125443a9586df59f2e58b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

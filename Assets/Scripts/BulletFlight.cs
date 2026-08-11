@@ -26,9 +26,19 @@ public class BulletFlight : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //if (gameObject.CompareTag("PundusBullet") && collision.CompareTag("Water"))
-        //{
+        if (gameObject.CompareTag("PundusBullet") && collision.CompareTag("WaterBarrier") || collision.CompareTag("SpikesBarrier"))
+        {
+            Destroy(gameObject);
+        }
+        
+        if (gameObject.CompareTag("LibidunBullet") && collision.CompareTag("FireBarrier") || collision.CompareTag("SpikesBarrier"))
+        {
+            Destroy(gameObject);
+        }
 
-        //}
+        if (gameObject.CompareTag("KustusBullet") && collision.CompareTag("WaterBarrier") || collision.CompareTag("SpikesBarrier") || collision.CompareTag("FireBarrier"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

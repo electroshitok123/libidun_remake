@@ -12,6 +12,9 @@ TagManager:
   - PundusBullet
   - KustusBullet
   - Box
+  - WaterBarrier
+  - FireBarrier
+  - SpikesBarrier
   layers:
   - Default
   - TransparentFX
@@ -69,6 +72,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 829461671
+    locked: 0
+  - name: Bullets
+    uniqueID: 1773497415
     locked: 0
   m_RenderingLayers:
   - Default

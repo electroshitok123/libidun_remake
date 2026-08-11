@@ -3,6 +3,23 @@ using UnityEngine;
 public class ButtonScript : MonoBehaviour
 {
     public int flagOnButton = 0;
+    Animator animator;
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+    private void Update()
+    {
+        if (flagOnButton == 1)
+        {
+            animator.SetBool("isOnButton", true);
+        }
+        else
+        {
+            animator.SetBool("isOnButton", false);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Box"))
@@ -41,4 +58,6 @@ public class ButtonScript : MonoBehaviour
             flagOnButton = 0;
         }
     }
+
+
 }

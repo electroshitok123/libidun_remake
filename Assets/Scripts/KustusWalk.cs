@@ -37,7 +37,7 @@ public class KustusWalk : MonoBehaviour
         
         UpdateAnimations();
         
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             GameObject bulletChild = Instantiate(bulletKustus, shootingPointSpawn);
             bulletChild.transform.SetParent(null);

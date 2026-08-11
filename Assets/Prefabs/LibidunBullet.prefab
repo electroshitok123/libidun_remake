@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5908759635677910614}
   - component: {fileID: 7055538876444432101}
   - component: {fileID: 1629726091171200103}
+  - component: {fileID: 1817021884172576119}
   m_Layer: 0
   m_Name: LibidunBullet
   m_TagString: LibidunBullet
@@ -80,9 +81,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1773497415
+  m_SortingLayer: 8
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 865190032098229347, guid: 0f825a79c9a25bd4388c5f58fc4376bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -181,3 +182,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!95 &1817021884172576119
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7839786585583748254}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d1bcef3d181c6f429e1f300560cf773, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
